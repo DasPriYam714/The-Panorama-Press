@@ -1,5 +1,7 @@
 import Header from "../shared/header/Header";
+import LeftNavbar from "../shared/leftNavbar/LeftNavbar";
 import Navbar from "../shared/navbar/Navbar";
+import RightNav from "../shared/rightNav/RightNav";
 
 
 const Home = () => {
@@ -8,11 +10,16 @@ const Home = () => {
             <Header></Header>
             <Navbar></Navbar>
             <h1 className="font-poppins text-2xl">This is Home.</h1>
-            <div>
-                <div>
+            <div className="grid grid-cols-1  md:grid-cols-4 gap-6">
+                <div className="border">
+                    <LeftNavbar></LeftNavbar>
                 </div>
-                <div></div>
-                <div></div>
+                <div className="md:col-span-2">
+                    <h2 className="text-2xl">News coming soon.</h2>
+                </div>
+                <div className="border">
+                    <RightNav></RightNav>
+                </div>
             </div>
         </div>
     );
