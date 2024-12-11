@@ -43,11 +43,11 @@ const RightNav = () => {
           className="flex p-4 items-center text-lg border rounded-b-lg"
           href=""
         >
-          <FaInstagram className="text-orange-500"></FaInstagram>
+          <FaInstagram className=" bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]"></FaInstagram>
           <span className="pl-2">Instagram</span>
         </a>
       </div>
-      <div className="p-4">
+      <div className="flex flex-col p-4 items-center">
       <h2 className="text-2xl mb-3">Q-Zone</h2>
       <div>
         <img src={QzPic1} alt="" />
