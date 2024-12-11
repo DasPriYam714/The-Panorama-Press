@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Navbar from "../../shared/navbar/Navbar";
 
 const Login = () => {
@@ -6,7 +7,7 @@ const Login = () => {
       <Navbar></Navbar>
 
       <div className="w-1/2 mx-auto mt-5">
-        <h2 className="text-2xl text-center">Please Login</h2>
+        <h2 className="text-2xl text-center font-semibold">Please Login</h2>
 
         <div>
           <form className="card-body">
@@ -43,7 +44,11 @@ const Login = () => {
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
+          <div className="text-center">
+            <p>Do not have an account? <Link className="text-blue-600" to={'/register'}>Register</Link></p>
         </div>
+        </div>
+       
       </div>
     </div>
   );
