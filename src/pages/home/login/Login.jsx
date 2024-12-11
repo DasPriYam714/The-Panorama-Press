@@ -2,6 +2,11 @@ import { Link } from "react-router";
 import Navbar from "../../shared/navbar/Navbar";
 
 const Login = () => {
+    const handleLogin =(e)=>{
+        e.preventDefault();
+        const login = new FormData(e.currentTarget)
+        console.log(login.get('email'))
+    }
   return (
     <div>
       <Navbar></Navbar>
@@ -10,7 +15,7 @@ const Login = () => {
         <h2 className="text-2xl text-center font-semibold">Please Login</h2>
 
         <div>
-          <form className="card-body">
+          <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>

@@ -1,20 +1,23 @@
 import { Link } from "react-router";
 import Navbar from "../../shared/navbar/Navbar";
 
-
 const Register = () => {
-    return (
-        <div>
-            <Navbar></Navbar>
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    console.log(form.get("name"));
+  };
+  return (
+    <div>
+      <Navbar></Navbar>
 
-
-<div className="w-1/2 mx-auto mt-5">
+      <div className="w-1/2 mx-auto mt-5">
         <h2 className="text-2xl text-center font-semibold">Please Register</h2>
 
         <div>
-          <form className="card-body">
+          <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
-            <label className="label">
+              <label className="label">
                 <span className="label-text">Name</span>
               </label>
               <input
@@ -58,7 +61,10 @@ const Register = () => {
               />
               <label className="label flex ">
                 <input type="checkbox" />
-                <p className="pl-2">accept <span className="font-semibold">Terms and Conditions</span></p>
+                <p className="pl-2">
+                  accept{" "}
+                  <span className="font-semibold">Terms and Conditions</span>
+                </p>
               </label>
             </div>
             <div className="form-control mt-6">
@@ -66,13 +72,17 @@ const Register = () => {
             </div>
           </form>
           <div className="text-center">
-            <p>Already have an account?<Link className="pl-2 text-blue-600" to={'/login'}>Login</Link></p>
+            <p>
+              Already have an account?
+              <Link className="pl-2 text-blue-600" to={"/login"}>
+                Login
+              </Link>
+            </p>
           </div>
         </div>
       </div>
-            
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Register;
